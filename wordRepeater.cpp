@@ -23,7 +23,7 @@ int main() {
     while (true) {
         std::cout << "What is your word? ";
         std::cin >> userWordAsString;
-        std::cout << "What is length of your subword? ";
+        std::cout << "What is the length of your subword? ";
         std::cin >> userLengthAsString;
         std::cout << "How many copies do you want to have? ";
         std::cin >> userCopiesAsString;
@@ -38,6 +38,7 @@ int main() {
         if ((userLengthFloat != userLengthInt)
         || (userCopiesFloat != userCopiesInt)) {
             std::cout << "Please enter whole numbers only!\n";
+            std::cout << "\n";
         }
 
         // Checks if it is between 0 and the length of your subword
@@ -51,12 +52,15 @@ int main() {
         } else {
             if (userCopiesInt < 0) {
                 std::cout << "Number of copies must be a positive integer!\n";
+                std::cout << "\n";
                 } else {
                     break;
                 }
         }
     }  catch (std::invalid_argument) {
-        std::cout << "Please enter a valid number!\n";
+        std::cout <<
+        "Please enter a valid number for the copies and the length\n";
+        std::cout << "\n";
         }
     }
 
