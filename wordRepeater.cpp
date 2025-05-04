@@ -1,12 +1,13 @@
 // Copyright (c) 2024 Jayden Smith All rights reserved.
 // Created by: Jayden Smith
 // Date: April 29, 2024
-// This program repeaters a user given word as many times they want.
+// This program repeats a user given word as many times they want.
 
 #include <iostream>
 #include <string>
 
 int main() {
+
     // Define my variables
     std::string userWordAsString;
     std::string userLengthAsString;
@@ -57,6 +58,8 @@ int main() {
                     break;
                 }
         }
+
+        // If the user's copies or subword is a str this happens
     }  catch (std::invalid_argument) {
         std::cout <<
         "Please enter a valid number for the copies and the length\n";
@@ -68,6 +71,7 @@ int main() {
     // Source: https://www.boardinfinity.com/blog/understanding-substr-function-in-c/
     std::string subword = userWordAsString.substr(0, userLengthInt);
 
+    // Prints the subword as may times as the user wants
     for (int copiesTracker = 0; copiesTracker
          < userCopiesInt; copiesTracker++) {
         std::cout << subword << std::endl;
