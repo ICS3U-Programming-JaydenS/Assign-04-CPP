@@ -1,6 +1,6 @@
 // Copyright (c) 2024 Jayden Smith All rights reserved.
 // Created by: Jayden Smith
-// Date: April 29, 2024
+// Date: April 19, 2024
 // This program repeats a user given word as many times they want.
 
 #include <iostream>
