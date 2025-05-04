@@ -28,7 +28,7 @@ int main() {
         std::cin >> userLengthAsString;
         std::cout << "How many copies do you want to have? ";
         std::cin >> userCopiesAsString;
-       try {
+        try {
 
             // Convert inputs to integers
             userLengthInt = std::stoi(userLengthAsString);
@@ -36,35 +36,35 @@ int main() {
             userLengthFloat = std::stof(userLengthAsString);
             userCopiesFloat = std::stof(userCopiesAsString);
 
-        // Check for decimals
-        if ((userLengthFloat != userLengthInt)
-        || (userCopiesFloat != userCopiesInt)) {
-            std::cout << "Please enter whole numbers only!\n";
-            std::cout << "\n";
+            // Check for decimals
+            if ((userLengthFloat != userLengthInt)
+            || (userCopiesFloat != userCopiesInt)) {
+                std::cout << "Please enter whole numbers only!\n";
+                std::cout << "\n";
         }
 
         // Checks if it is between 0 and the length of your subword
         // Source https://stackoverflow.com/questions/58372281/determining-the-amount-of-letters-in-each-word-of-a-string-in-c
-        if (userLengthInt < 0 || userLengthInt > userWordAsString.length()) {
-            std::cout <<
-             "Subword length must be between 0 and the length of your word!\n";
-            std::cout << "\n";
+            if (userLengthInt < 0 || userLengthInt > userWordAsString.length()) {
+                std::cout <<
+                "Subword length must be between 0 and the length of your word!\n";
+                std::cout << "\n";
 
         // If not it checks if the user copies is not negative
-        } else {
-            if (userCopiesInt < 0) {
-                std::cout << "Number of copies must be a positive integer!\n";
-                std::cout << "\n";
+            } else {
+                if (userCopiesInt < 0) {
+                    std::cout << "Number of copies must be a positive integer!\n";
+                    std::cout << "\n";
                 } else {
                     break;
                 }
         }
 
         // If the user's copies or subword is a str this happens
-    }  catch (std::invalid_argument) {
-        std::cout <<
-        "Please enter a valid number for the copies and the length\n";
-        std::cout << "\n";
+        }catch (std::invalid_argument) {
+            std::cout <<
+            "Please enter a valid number for the copies and the length\n";
+            std::cout << "\n";
         }
     }
 
