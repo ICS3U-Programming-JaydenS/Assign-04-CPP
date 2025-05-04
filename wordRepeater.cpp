@@ -29,6 +29,7 @@ int main() {
         std::cout << "How many copies do you want to have? ";
         std::cin >> userCopiesAsString;
        try {
+
             // Convert inputs to integers
             userLengthInt = std::stoi(userLengthAsString);
             userCopiesInt = std::stoi(userCopiesAsString);
